@@ -74,10 +74,14 @@ h1 {
 }
 
 .righttoleft {
-      -moz-animation-duration: 3s;
-      -webkit-animation-duration: 3s;
-      -moz-animation-name: slidein;
-      -webkit-animation-name: slidein;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-name: slidein;
+  -moz-animation-name: slidein;
+  -o-animation-name: slidein;
+  animation-name: slidein;
 }
     
 @-moz-keyframes slidein {
@@ -107,22 +111,39 @@ h1 {
 }
 
 .bouncing {
-  -moz-animation-duration: 1s;
   -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
   -o-animation-duration: 1s;
   animation-duration: 1s;
-  -moz-animation-name: bouncing;
   -webkit-animation-name: bouncing;
+  -moz-animation-name: bouncing;
   -o-animation-name: bouncing;
   animation-name: bouncing;
-  -moz-animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
   -o-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  -moz-animation-direction: alternate;
   -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
   -o-animation-direction: alternate;
   animation-direction: alternate;
+}
+
+@-webkit-keyframes bouncing {
+  from {
+    margin-left: 52%;
+    margin-right: 0%
+    width: 100%;
+    
+  }
+
+  to {
+    margin-left: 0%;
+    margin-right: 52%;
+    width: 100%;
+    
+  }
+
 }
 
 @-moz-keyframes bouncing {
@@ -142,7 +163,7 @@ h1 {
 
 }
     
-@-webkit-keyframes bouncing {
+@-o-keyframes bouncing {
   from {
     margin-left: 52%;
     margin-right: 0%
@@ -159,7 +180,7 @@ h1 {
 
 }
 
-@-o-keyframes bouncing {
+@keyframes bouncing {
   from {
     margin-left: 52%;
     margin-right: 0%
@@ -183,6 +204,9 @@ h1 {
   width: 100px;
   height: 100px;
   border-radius: 50px;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
   transition: all 1s;
 }
 
@@ -199,8 +223,10 @@ h1 {
   background-size: cover;
   width: 100px; 
   height: 100px;
-  -webkit-transition:width 2s, height 2s, background-image 2s, -webkit-transform 2s, margin-left 2s;
-  transition:width 2s, height 2s, background-image 2s, transform 2s, margin-left 2s;
+  -webkit-transition: width 2s, height 2s, background-image 2s, -webkit-transform 2s, margin-left 2s;
+  -moz-transition: width 2s, height 2s, background-image 2s, -webkit-transform 2s, margin-left 2s;
+  -o-transition: width 2s, height 2s, background-image 2s, -webkit-transform 2s, margin-left 2s;
+  transition: width 2s, height 2s, background-image 2s, transform 2s, margin-left 2s;
 
 }
 .rotate:active {
@@ -208,6 +234,8 @@ h1 {
   width: 200px; 
   height: 200px;
   -webkit-transform: rotate(2890deg);
+  -moz-transform: rotate(2890deg);
+  -o-transform: rotate(2890deg);
   transform: rotate(2890deg);
 }
 
@@ -218,8 +246,10 @@ h1 {
   width: 160px; 
   height: 170px;
   border: 0px solid rgba(0, 0, 0, 0.7);
-  transition: all 2s ease;
   -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
 }
 
 .miley:hover{
@@ -235,6 +265,15 @@ h1 {
   background-color: #000000;
   width: 370px;
   height: 300px;
+  -webkit-transition: all           1s   linear,
+              width         1s   ease,
+              background    1s   ease;
+  -moz-transition: all           1s   linear,
+              width         1s   ease,
+              background    1s   ease;
+  -o-transition: all           1s   linear,
+              width         1s   ease,
+              background    1s   ease;
   transition: all           1s   linear,
               width         1s   ease,
               background    1s   ease;
@@ -247,12 +286,18 @@ h1 {
   margin-right: 20px;
   width: 80px;
   height: 0px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 
 .graph .small {
   background: white;
   height: 10px;
+  -webkit-transition: all 10 ease;
+  -moz-transition: all 10 ease;
+  -o-transition: all 10 ease;
   transition: all 10 ease;
   
 }
@@ -260,12 +305,18 @@ h1 {
 .graph .medium {
   background: blue;
   height: 10px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
  
 .graph .large {
   background: yellow;
-  height: 10px;  
+  height: 10px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
  
@@ -295,8 +346,10 @@ h1 {
     background-size: cover;
     width: 100px; 
     height: 100px;
-    -webkit-transition:width 2s, height 2s, background-image 2s, -webkit-transform 2s, margin-left 2s;
-    transition:width 2s, height 2s, background-image 2s, transform 2s, margin-left 2s;
+    -webkit-transition: width 2s, height 2s, background-image 2s, transform 2s, margin-left 2s;
+    -moz-transition: width 2s, height 2s, background-image 2s, transform 2s, margin-left 2s;
+    -o-transition: width 2s, height 2s, background-image 2s, transform 2s, margin-left 2s;
+    transition: width 2s, height 2s, background-image 2s, transform 2s, margin-left 2s;
 }
 
 .roll:active {
@@ -305,6 +358,8 @@ h1 {
     width: 200px; 
     height: 200px;
     -webkit-transform: rotate(2890deg);
+    -moz-transform: rotate(2890deg);
+    -o-transform: rotate(2890deg);
     transform: rotate(2890deg);
 }
 
@@ -316,11 +371,13 @@ h1 {
   background-size: cover;
   width:200px;
   height:150px;
-  animation: fall 5s infinite;
   -webkit-animation: fall 5s infinite; 
+  -moz-animation: fall 5s infinite; 
+  -o-animation: fall 5s infinite; 
+  animation: fall 5s infinite;
 }
 
-@keyframes fall {
+@-webkit-keyframes fall {
   from {
     top: 0px;
   }
@@ -331,7 +388,29 @@ h1 {
 
 }
 
-@-webkit-keyframes fall {
+@-moz-keyframes fall {
+  from {
+    top: 0px;
+  }
+
+  to {
+    top: 200px;
+  }
+
+}
+
+@-o-keyframes fall {
+  from {
+    top: 0px;
+  }
+
+  to {
+    top: 200px;
+  }
+
+}
+
+@keyframes fall {
   from {
     top: 0px;
   }
@@ -350,6 +429,9 @@ h1 {
   border-bottom: 60px solid #224967;
   width: 0px; 
   height: 0px; 
+  -webkit-transition: all 3s;
+  -moz-transition: all 3s;
+  -o-transition: all 3s;
   transition: all 3s;
 }
 
@@ -371,12 +453,46 @@ h1 {
   margin-right: auto;
   background-image: url("images/flash.jpg");
   -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
   -webkit-animation: flash normal .3s infinite ease-in-out;
+  -moz-animation: flash normal .3s infinite ease-in-out;
+  -o-animation: flash normal .3s infinite ease-in-out;
   animation: flash normal .3s infinite ease-in-out;
 }
 
 @-webkit-keyframes flash {
+  0% {
+    opacity: 1;
+  } 
+
+  50% {
+    opacity :0;
+  } 
+
+  100% {
+    opacity :1;
+  }
+
+}
+
+@-moz-keyframes flash {
+  0% {
+    opacity: 1;
+  } 
+
+  50% {
+    opacity :0;
+  } 
+
+  100% {
+    opacity :1;
+  }
+
+}
+
+@-o-keyframes flash {
   0% {
     opacity: 1;
   } 
@@ -409,10 +525,22 @@ h1 {
 .flash:active {
   margin-left: 100%;  
   background-image: url("images/flash.jpg");
-  -moz-animation-name: flashout;
   -webkit-animation-name: flashout;
-}
+  -moz-animation-name: flashout;
+  -o-animation-name: flashout;
+  animation-name: flashout;
     
+@-webkit-keyframes flashout {
+  from {
+    margin-left:42%;
+  }
+      
+  to {
+    margin-left:100%;
+  }
+
+}
+
 @-moz-keyframes flashout {
   from {
     margin-left:42%;
@@ -423,8 +551,19 @@ h1 {
   }
 
 }
-    
-@-webkit-keyframes flashout {
+
+@-o-keyframes flashout {
+  from {
+    margin-left:42%;
+  }
+      
+  to {
+    margin-left:100%;
+  }
+
+}
+
+@keyframes flashout {
   from {
     margin-left:42%;
   }
@@ -448,6 +587,8 @@ h1 {
   width: 780px; 
   height: 280px;
   -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
 
@@ -455,6 +596,8 @@ h1 {
   width: 780px; 
   height: 780px;
   -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
 
@@ -464,16 +607,22 @@ h1 {
   width: 400px;
   height: 200px;
   -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 
 .blackandwhite:hover {
   -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
   filter: grayscale(100%);
 }
 
 .blackandwhite:active {
   -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
   filter: blur(2px);
 }
 
@@ -486,6 +635,8 @@ h1 {
   display: inline-block;
   font-size: 150px;
   -webkit-transition: 1s .5s;
+  -moz-transition: 1s .5s;
+  -o-transition: 1s .5s;
   transition: 1s .5s;
 }
 
@@ -493,6 +644,8 @@ h1 {
   display: inline-block;
   font-size: 150px;
   -webkit-transition: 1s .7s;
+  -moz-transition: 1s .7s;
+  -o-transition: 1s .7s;
   transition: 1s .7s;
 }
 
@@ -500,24 +653,32 @@ h1 {
   display: inline-block;
   font-size: 150px;
   -webkit-transition: 1s .9s;
+  -moz-transition: 1s .9s;
+  -o-transition: 1s .9s;
   transition: 1s .9s;
 }
 
 .colorfade:hover .c {
   color: red;
   -webkit-animation: 1s .5s;
+  -moz-animation: 1s .5s;
+  -o-animation: 1s .5s;
   animation: 1s .5s;
 }
 
 .colorfade:hover .o {
   color: red;
   -webkit-animation: 1s .7s;
+  -moz-animation: 1s .7s;
+  -o-animation: 1s .7s;
   animation: 1s .7s;
 }
 
 .colorfade:hover .l {
   color: red;
   -webkit-animation: 1s .9s;
+  -moz-animation: 1s .9s;
+  -o-animation: 1s .9s;
   animation: 1s .9s;
 }
 
@@ -525,12 +686,16 @@ h1 {
   display: inline-block;
   font-size: 150px;
   -webkit-transition: 1s 1.1s;
+  -moz-transition: 1s 1.1s;
+  -o-transition: 1s 1.1s;
   transition: 1s 1.1s;
 }
 
 .colorfade:hover .oo {
   color: red;
   -webkit-animation: 1s 1.1s;
+  -moz-animation: 1s 1.1s;
+  -o-animation: 1s 1.1s;
   animation: 1s 1.1s;
 }
 
@@ -538,12 +703,16 @@ h1 {
   display: inline-block;
   font-size: 150px;
   -webkit-transition: 1s 1.3s;
+  -moz-transition: 1s 1.3s;
+  -o-transition: 1s 1.3s;
   transition: 1s 1.3s;
 }
 
 .colorfade:hover .r {
   color: red;
   -webkit-animation: 1s 1.3s;
+  -moz-animation: 1s 1.3s;
+  -o-animation: 1s 1.3s;
   animation: 1s 1.3s;
 }
 
@@ -551,12 +720,16 @@ h1 {
   display: inline-block;
   font-size: 150px;
   -webkit-transition: 1s 1.7s;
+  -moz-transition: 1s 1.7s;
+  -o-transition: 1s 1.7s;
   transition: 1s 1.7s;
 }
 
 .colorfade:hover .f {
   color: red;
   -webkit-animation: 1s 1.7s;
+  -moz-animation: 1s 1.7s;
+  -o-animation: 1s 1.7s;
   animation: 1s 1.7s;
 }
 
@@ -569,23 +742,31 @@ h1 {
   display: inline-block;
   font-size: 150px;
   -webkit-transition: 1s 1.9s;
+  -moz-transition: 1s 1.9s;
+  -o-transition: 1s 1.9s;
   transition: 1s 1.9s;
 }
 
 .colorfade:hover .a {
   color: red;
-  animation: 1s 1.9s;
   -webkit-animation: 1s 1.9s;
+  -moz-animation: 1s 1.9s;
+  -o-animation: 1s 1.9s;
+  animation: 1s 1.9s;
 }
 
 .d {
   display: inline-block;
   font-size: 150px;
   -webkit-transition: 1s 1.9s;
+  -moz-transition: 1s 1.9s;
+  -o-transition: 1s 1.9s;
   transition: 1s 1.9s;
 }
 .colorfade:hover .d {
   color: red;
+  -moz-animation: 1s 1.9s;
+  -o-animation: 1s 1.9s;
   -webkit-animation: 1s 1.9s;
   animation: 1s 1.9s;
 }
@@ -594,12 +775,16 @@ h1 {
   display: inline-block;
   font-size: 150px;
   -webkit-transition: 1s 2.1s;
+  -moz-transition: 1s 2.1s;
+  -o-transition: 1s 2.1s;
   transition: 1s 2.1s;
 }
 
 .colorfade:hover .e {
   color: red;
   -webkit-animation: 1s 2.1s;
+  -moz-animation: 1s 2.1s;
+  -o-animation: 1s 2.1s;
   animation: 1s 2.1s;
 }
 
@@ -607,13 +792,17 @@ h1 {
   display: inline-block;
   font-size: 150px;
   -webkit-transition: 1s 2.3s;
+  -moz-transition: 1s 2.3s;
+  -o-transition: 1s 2.3s;
   transition: 1s 2.3s;
 }
 
 .colorfade:hover .period {
   color: red;
-  animation: 1s 2.3s;
   -webkit-animation: 1s 2.3s;
+  -moz-animation: 1s 2.3s;
+  -o-animation: 1s 2.3s;
+  animation: 1s 2.3s;
 }
 
 .diagnal {
@@ -623,18 +812,24 @@ h1 {
   font-family: arial;
   text-align: center;
   -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 
 .diagnal:active {
   color: red;
   -webkit-animation-name: diagnal;
+  -moz-animation-name: diagnal;
+  -o-animation-name: diagnal;
   animation-name: diagnal;
   -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
   animation-duration: 3s;
 }
 
-@keyframes diagnal {
+@-webkit-keyframes diagnal {
   from {
     margin-top: 0;
     margin-left: 0;
@@ -647,7 +842,33 @@ h1 {
 
 }
 
-@-webkit-keyframes diagnal {
+@-moz-keyframes diagnal {
+  from {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  to {
+    margin-top: 180px;
+    margin-left: 180px;
+  }
+
+}
+
+@-o-keyframes diagnal {
+  from {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  to {
+    margin-top: 180px;
+    margin-left: 180px;
+  }
+
+}
+
+@keyframes diagnal {
   from {
     margin-top: 0;
     margin-left: 0;
@@ -673,6 +894,9 @@ h1 {
   background-size:100px 70px;
   height: 70px;
   width: 100px;
+  -webkit-transition: all ease-out;
+  -moz-transition: all ease-out;
+  -o-transition: all ease-out;
   transition: all ease-out;
 }
 
@@ -683,12 +907,16 @@ h1 {
   max-height: 70px;
   max-width: 200px;
   -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
   animation-duration: 3s;
   -webkit-animation-name: slideout;
+  -moz-animation-name: slideout;
+  -o-animation-name: slideout;
   animation-name: slideout;   
 }
     
-@keyframes slideout {
+@-webkit-keyframes slideout {
   from {
     margin-left:50px;
   }
@@ -698,8 +926,30 @@ h1 {
   }
 
 }
-    
-@-webkit-keyframes slideout {
+
+@-moz-keyframes slideout {
+  from {
+    margin-left:50px;
+  }
+      
+  to {
+    margin-left:150%;
+  }
+
+}
+
+@-o-keyframes slideout {
+  from {
+    margin-left:50px;
+  }
+      
+  to {
+    margin-left:150%;
+  }
+
+}
+
+@keyframes slideout {
   from {
     margin-left:50px;
   }
@@ -716,16 +966,134 @@ h1 {
   height: 100px;
   width: 100px;
   -webkit-transition: ease;
+  -moz--transition: ease;
+  -o--transition: ease;
   transition: ease;
 }
 
 .frog:active {
   background-image: url("images/frogdown.jpg");
   -webkit-animation: frog 1s infinite;
+  -moz-animation: frog 1s infinite;
+  o-animation: frog 1s infinite;
   animation: frog 1s infinite;
 }
 
 @-webkit-keyframes frog {
+  0% {
+    margin-top: 0px;
+  }
+
+  10% {
+    margin-top: 200px;
+    margin-left: 100px;
+  }
+
+  20% {
+    margin-top: 150px;
+    margin-left: 125px;
+  }
+
+  30% {
+    margin-top: 100px;
+    margin-left: 150px;
+  }
+
+  40% {
+    margin-top: 150px;
+    margin-left: 175px;
+  }
+
+  50% {
+    margin-top: 200;
+    margin-left: 200px;
+  }
+
+  60% {
+    margin-top: 150;
+    margin-left: 225px;
+  }
+
+  70% {
+    margin-top: 100;
+    margin-left: 250px;
+  }
+
+  80% {
+    margin-top: 150;
+    margin-left: 275px;
+  }
+
+  90% {
+    margin-top: 200;
+    margin-left: 300px;
+  }
+
+  100% {
+    margin-top: 150;
+    margin-left: 325px;
+  }
+
+}
+
+@-moz-keyframes frog {
+  0% {
+    margin-top: 0px;
+  }
+
+  10% {
+    margin-top: 200px;
+    margin-left: 100px;
+  }
+
+  20% {
+    margin-top: 150px;
+    margin-left: 125px;
+  }
+
+  30% {
+    margin-top: 100px;
+    margin-left: 150px;
+  }
+
+  40% {
+    margin-top: 150px;
+    margin-left: 175px;
+  }
+
+  50% {
+    margin-top: 200;
+    margin-left: 200px;
+  }
+
+  60% {
+    margin-top: 150;
+    margin-left: 225px;
+  }
+
+  70% {
+    margin-top: 100;
+    margin-left: 250px;
+  }
+
+  80% {
+    margin-top: 150;
+    margin-left: 275px;
+  }
+
+  90% {
+    margin-top: 200;
+    margin-left: 300px;
+  }
+
+  100% {
+    margin-top: 150;
+    margin-left: 325px;
+  }
+
+}
+
+@-o-keyframes frog {
   0% {
     margin-top: 0px;
   }
@@ -847,6 +1215,8 @@ h1 {
   width: 350px;
   height: 200px;
   -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -o-transition: all 2s;
   transition: all 2s;
 }
 
@@ -860,16 +1230,50 @@ h1 {
   width: 400px;
   height: 400px;
   -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 
 .hoverinside:hover{
   margin: 0 auto;
   -webkit-animation: hover 3s infinite;
+  -moz-animation: hover 3s infinite;
+  -o-animation: hover 3s infinite;
   animation: hover 3s infinite;
 }
 
 @-webkit-keyframes hover {
+  0% {
+    margin-top: 100px;
+  }
+
+  50% {
+    margin-top: 0px;
+  }
+
+  100% {
+    margin-top: 100px; 
+  }
+
+}
+
+@-moz-keyframes hover {
+  0% {
+    margin-top: 100px;
+  }
+
+  50% {
+    margin-top: 0px;
+  }
+
+  100% {
+    margin-top: 100px; 
+  }
+
+}
+
+@-o-keyframes hover {
   0% {
     margin-top: 100px;
   }
@@ -898,6 +1302,7 @@ h1 {
   }
 
 }
+
 .circleshadow {
   margin-left: auto;
   margin-right: auto;
@@ -906,6 +1311,8 @@ h1 {
   height: 100px;
   border-radius: 50px;
   -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
   transition: all 2s ease;
 }
 
@@ -920,10 +1327,153 @@ h1 {
   width: 250px;
   height: 244px;
   -webkit-animation: clock 10s infinite;
+  -moz-animation: clock 10s infinite;
+  -o-animation: clock 10s infinite;
   animation: clock 10s infinite;
 }
 
 @-webkit-keyframes clock {
+  0% {
+    background-image: url("images/clock/00.png");
+  }
+  
+  10% {
+    background-image: url("images/clock/01.png");
+  }
+
+  20% {
+    background-image: url("images/clock/02.png");
+  }
+
+  30% {
+    background-image: url("images/clock/03.png");
+  }
+
+  40% { 
+    background-image: url("images/clock/04.png");
+  }
+
+  50% {
+    background-image: url("images/clock/05.png");
+  }
+
+  60% {
+    background-image: url("images/clock/06.png");
+  }
+
+  70% {
+    background-image: url("images/clock/07.png");
+  }
+
+  80% {
+    background-image: url("images/clock/08.png");
+  }
+
+  90% {
+    background-image: url("images/clock/09.png");
+  }
+
+  100% {
+    background-image: url("images/clock/10.png");
+  }
+
+}
+
+@-moz-keyframes clock {
+  0% {
+    background-image: url("images/clock/00.png");
+  }
+  
+  10% {
+    background-image: url("images/clock/01.png");
+  }
+
+  20% {
+    background-image: url("images/clock/02.png");
+  }
+
+  30% {
+    background-image: url("images/clock/03.png");
+  }
+
+  40% { 
+    background-image: url("images/clock/04.png");
+  }
+
+  50% {
+    background-image: url("images/clock/05.png");
+  }
+
+  60% {
+    background-image: url("images/clock/06.png");
+  }
+
+  70% {
+    background-image: url("images/clock/07.png");
+  }
+
+  80% {
+    background-image: url("images/clock/08.png");
+  }
+
+  90% {
+    background-image: url("images/clock/09.png");
+  }
+
+  100% {
+    background-image: url("images/clock/10.png");
+  }
+
+}
+
+@-o-keyframes clock {
+  0% {
+    background-image: url("images/clock/00.png");
+  }
+  
+  10% {
+    background-image: url("images/clock/01.png");
+  }
+
+  20% {
+    background-image: url("images/clock/02.png");
+  }
+
+  30% {
+    background-image: url("images/clock/03.png");
+  }
+
+  40% { 
+    background-image: url("images/clock/04.png");
+  }
+
+  50% {
+    background-image: url("images/clock/05.png");
+  }
+
+  60% {
+    background-image: url("images/clock/06.png");
+  }
+
+  70% {
+    background-image: url("images/clock/07.png");
+  }
+
+  80% {
+    background-image: url("images/clock/08.png");
+  }
+
+  90% {
+    background-image: url("images/clock/09.png");
+  }
+
+  100% {
+    background-image: url("images/clock/10.png");
+  }
+
+}
+
+@keyframes clock {
   0% {
     background-image: url("images/clock/00.png");
   }
@@ -978,6 +1528,8 @@ h1 {
   height: 202px;
   width: 379px;
   -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -999,6 +1551,8 @@ h1 {
 
 .rockingchair:hover {
   -webkit-animation: rock 1s infinite;
+  -moz-animation: rock 1s infinite;
+  -o-animation: rock 1s infinite;
   animation: rock 1s infinite;
 }
 
@@ -1021,6 +1575,63 @@ h1 {
 
 }
 
+@-moz-keyframes rock {
+  0% {
+    -moz-transform: rotate(20deg);
+    -moz-transform 0.5s ease-in;
+
+    }
+
+  50% {
+    -moz-transform: rotate(-20deg);
+    -moz-transform 0.5s ease-in;
+    }
+
+  100% {
+    -moz-transform: rotate(10deg);
+    -moz-transform 0.5s ease-in;
+  }
+
+}
+
+@-o-keyframes rock {
+  0% {
+    -o-transform: rotate(20deg);
+    -o-transform 0.5s ease-in;
+
+    }
+
+  50% {
+    -o-transform: rotate(-20deg);
+    -o-transform 0.5s ease-in;
+    }
+
+  100% {
+    -o-transform: rotate(10deg);
+    -o-transform 0.5s ease-in;
+  }
+
+}
+
+@keyframes rock {
+  0% {
+    transform: rotate(20deg);
+    transform 0.5s ease-in;
+
+    }
+
+  50% {
+    transform: rotate(-20deg);
+    transform 0.5s ease-in;
+    }
+
+  100% {
+    transform: rotate(10deg);
+    transform 0.5s ease-in;
+  }
+
+}
+
 .imageshrink {
   margin-left: auto;
   margin-right: auto;
@@ -1029,15 +1640,115 @@ h1 {
   width: 500px;
   height: 500px;
   -webkit-transform: all 3s ease-in;
+  -moz-transform: all 3s ease-in;
+  -0-transform: all 3s ease-in;
   transform: all 3s ease-in;
 }
 
 .imageshrink:hover{
   -webkit-animation: imageshrink 1s infinite;
+  -moz-animation: imageshrink 1s infinite;
+  -o-animation: imageshrink 1s infinite;
   animation: imageshrink 1s infinite;
 }
   
 @-webkit-keyframes imageshrink {
+  0% {
+    width: 500px;
+    height: 500px;
+  }
+
+  25% {
+    background-size: 400px 400px;
+    width: 400px;
+    height: 400px;
+  }
+
+  50% {
+    background-size: 300px 300px;
+    width: 300px;
+    height: 300px;
+    }
+
+  75% {
+    background-size: 200px 200px; 
+    width: 200px;
+    height: 200px;
+  }
+
+  100% {
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+  }
+
+}
+
+@-moz-keyframes imageshrink {
+  0% {
+    width: 500px;
+    height: 500px;
+  }
+
+  25% {
+    background-size: 400px 400px;
+    width: 400px;
+    height: 400px;
+  }
+
+  50% {
+    background-size: 300px 300px;
+    width: 300px;
+    height: 300px;
+    }
+
+  75% {
+    background-size: 200px 200px; 
+    width: 200px;
+    height: 200px;
+  }
+
+  100% {
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+  }
+
+}
+
+@-o-keyframes imageshrink {
+  0% {
+    width: 500px;
+    height: 500px;
+  }
+
+  25% {
+    background-size: 400px 400px;
+    width: 400px;
+    height: 400px;
+  }
+
+  50% {
+    background-size: 300px 300px;
+    width: 300px;
+    height: 300px;
+    }
+
+  75% {
+    background-size: 200px 200px; 
+    width: 200px;
+    height: 200px;
+  }
+
+  100% {
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+  }
+
+}
+
+@keyframes imageshrink {
   0% {
     width: 500px;
     height: 500px;
@@ -1118,4 +1829,3 @@ h1 {
   height: 213px;
   
 }
-
