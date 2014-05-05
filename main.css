@@ -51,6 +51,7 @@ h1 {
 .descrip {
 	text-align:center;
 	font-size: 16px;	
+  margin-top: 20px;
   min-width: 960px;
 }
 
@@ -804,14 +805,13 @@ transition: 1s 2.3s;
   height: 100px;
   width: 100px;
   background-image: url("images/frog.jpg");
-  height: 100px;
-  width: 100px;
   background-size: 100px 100px;
   -webkit-transition: ease;
   transition: ease;
 }
 
 .frog:active {
+  background-image: url("images/frogdown.jpg");
   -webkit-animation: frog 1s infinite;
   animation: frog 1s infinite;
 }
@@ -819,156 +819,113 @@ transition: 1s 2.3s;
 @-webkit-keyframes frog {
   0% {
     margin-top: 0px;
-    background-size: 100px 100px;
-    background-image: url("images/frog.jpg");
   }
 
   10% {
     margin-top: 200px;
     margin-left: 100px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
   20% {
     margin-top: 150px;
     margin-left: 125px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
   30% {
     margin-top: 100px;
     margin-left: 150px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
   40% {
     margin-top: 150px;
     margin-left: 175px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
   50% {
     margin-top: 200;
     margin-left: 200px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
   60% {
     margin-top: 150;
     margin-left: 225px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
   70% {
     margin-top: 100;
     margin-left: 250px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
   80% {
     margin-top: 150;
     margin-left: 275px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
   90% {
     margin-top: 200;
     margin-left: 300px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
   100% {
     margin-top: 150;
     margin-left: 325px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
 }
+
 @keyframes frog {
   0% {
     margin-top: 0px;
-    background-size: 100px 100px;
-    background-image: url("images/frog.jpg");
   }
 
   10 {
     margin-top: 200px;
     margin-left: 100px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
   20% {
     margin-top: 150px;
     margin-left: 125px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
   30% {
     margin-top: 100px;
     margin-left: 150px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
   40% {
     margin-top: 150px;
     margin-left: 175px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
   50% {
     margin-top: 200;
     margin-left: 200px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
   60% {
     margin-top: 150;
     margin-left: 225px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
   70% {
     margin-top: 100;
     margin-left: 250px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
   80% {
     margin-top: 150;
     margin-left: 275px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
   90% {
     margin-top: 200;
     margin-left: 300px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
   100% {
     margin-top: 150;
     margin-left: 325px;
-    background-size: 100px 100px;
-    background-image: url("images/frogdown.jpg");
   }
 
 }
@@ -985,13 +942,7 @@ transition: 1s 2.3s;
 }
 
 .imgzoom:hover {
-  background-image: url("images/zoom.jpg");
-  max-width: 350px;
-  max-height: 200px;
-  margin-left: auto;
-  margin-right: auto;
   background-size: 1150px 800px;
-  background-position: center;
 }
 
 .hover {
@@ -999,31 +950,27 @@ transition: 1s 2.3s;
   height: 400px;
   margin: 0 auto;
   margin-bottom: 250px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
+
 .hoverinside:hover{
   margin: 0 auto;
-  -webkit-animation: hover 1s infinite;
-  animation: hover 1s infinite;
+  -webkit-animation: hover 3s infinite;
+  animation: hover 3s infinite;
 }
 
 @-webkit-keyframes hover {
   0% {
     margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto; 
-
   }
 
   50% {
     margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   100% {
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;  
+    margin-top: 100px; 
   }
 
 }
@@ -1031,20 +978,14 @@ transition: 1s 2.3s;
 @keyframes hover {
   0% {
     margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto; 
   }
 
   50% {
     margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   100% {
     margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;  
   }
 
 }
@@ -1055,6 +996,11 @@ transition: 1s 2.3s;
   margin-right: auto;
   background: #fc2e5a;
   border-radius: 50px;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.circleshadow:hover {
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 1);
 }
 
@@ -1070,68 +1016,46 @@ transition: 1s 2.3s;
 
 @-webkit-keyframes clock {
   0% {
-    width: 250px;
-    height: 240px;
     background-image: url("images/clock/00.png");
   }
   
   10% {
-    width: 250px;
-    height: 240px;
     background-image: url("images/clock/01.png");
   }
 
   20% {
-    width: 250px;
-    height: 240px;
     background-image: url("images/clock/02.png");
   }
 
   30% {
-    width: 250px;
-    height: 240px; 
     background-image: url("images/clock/03.png");
   }
 
-  40% {
-    width: 250px;
-    height: 240px;  
+  40% { 
     background-image: url("images/clock/04.png");
   }
 
   50% {
-    width: 250px;
-    height: 240px;
     background-image: url("images/clock/05.png");
   }
 
   60% {
-    width: 250px;
-    height: 240px;
     background-image: url("images/clock/06.png");
   }
 
   70% {
-    width: 250px;
-    height: 240px;
     background-image: url("images/clock/07.png");
   }
 
   80% {
-    width: 250px;
-    height: 240px;
     background-image: url("images/clock/08.png");
   }
 
   90% {
-    width: 250px;
-    height: 240px;
     background-image: url("images/clock/09.png");
   }
 
   100% {
-    width: 250px;
-    height: 240px;
     background-image: url("images/clock/10.png");
   }
 
@@ -1153,8 +1077,6 @@ transition: 1s 2.3s;
   height: 348px;
   width: 258px;
   background-size: 258px 348px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .rockingchair {
@@ -1210,47 +1132,30 @@ transition: 1s 2.3s;
   0% {
     width: 500px;
     height: 500px;
-    background-image: url("images/shrink.jpg");
-    margin-left: auto;
-    margin-right: auto;  
-    margin-left: auto;
-    margin-right: auto; 
   }
 
   25% {
     width: 400px;
     height: 400px;
     background-size: 400px 400px;
-    background-image: url("images/shrink.jpg");
-    margin-left: auto;
-    margin-right: auto;  
   }
 
   50% {
     width: 300px;
     height: 300px;
     background-size: 300px 300px;
-    background-image: url("images/shrink.jpg");
-    margin-left: auto;
-    margin-right: auto;  
     }
 
   75% {
     width: 200px;
     height: 200px;
-    background-size: 200px 200px;
-    background-image: url("images/shrink.jpg");
-    margin-left: auto;
-    margin-right: auto;  
+    background-size: 200px 200px; 
   }
 
   100% {
     width: 100px;
     height: 100px;
     background-size: 100px 100px;
-    background-image: url("images/shrink.jpg");
-    margin-left: auto;
-    margin-right: auto;  
   }
 
 }
@@ -1264,9 +1169,7 @@ transition: 1s 2.3s;
   background-image: url("images/clickbutton.gif");
 }
 
-.clickmebuttonfun:active {
-  margin-left: auto;
-  margin-right: auto;  
+.clickmebuttonfun:active { 
   width: 960px;
   height: 460px;
   background-size: 960px 460px;
@@ -1282,12 +1185,7 @@ transition: 1s 2.3s;
   background-image: url("images/sleepy.gif");
 }
 
-.sleepy:hover {
-  margin-left: auto;
-  margin-right: auto;  
-  width: 400px;
-  height: 260px;
-  background-size: 400px 260px;
+.sleepy:hover { 
   background-image: url("images/drunk.gif");
 }
 
@@ -1302,9 +1200,7 @@ transition: 1s 2.3s;
   transition: all 2s ease;
 }
 
-.thirty:hover {
-  margin-left: auto;
-  margin-right: auto;  
+.thirty:hover { 
   width: 1000px;
   height: 213px;
   background-size: 1000px 213px;
