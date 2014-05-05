@@ -40,7 +40,7 @@ h1 {
   box-shadow: inset 0px 3px 00px black;
 }
 
-.info {
+.examplename {
   margin: 20px auto;
   padding: 20px;
   font-size: 20px;
@@ -224,8 +224,8 @@ h1 {
   width: 100px; 
   height: 100px;
   -webkit-transition: width 2s, height 2s, background-image 2s, -webkit-transform 2s, margin-left 2s;
-  -moz-transition: width 2s, height 2s, background-image 2s, -webkit-transform 2s, margin-left 2s;
-  -o-transition: width 2s, height 2s, background-image 2s, -webkit-transform 2s, margin-left 2s;
+  -moz-transition: width 2s, height 2s, background-image 2s, -moz-transform 2s, margin-left 2s;
+  -o-transition: width 2s, height 2s, background-image 2s, -o-transform 2s, margin-left 2s;
   transition: width 2s, height 2s, background-image 2s, transform 2s, margin-left 2s;
 
 }
@@ -346,9 +346,9 @@ h1 {
     background-size: cover;
     width: 100px; 
     height: 100px;
-    -webkit-transition: width 2s, height 2s, background-image 2s, transform 2s, margin-left 2s;
-    -moz-transition: width 2s, height 2s, background-image 2s, transform 2s, margin-left 2s;
-    -o-transition: width 2s, height 2s, background-image 2s, transform 2s, margin-left 2s;
+    -webkit-transition: width 2s, height 2s, background-image 2s, -webkit-transform 2s, margin-left 2s;
+    -moz-transition: width 2s, height 2s, background-image 2s, -moz-transform 2s, margin-left 2s;
+    -o-transition: width 2s, height 2s, background-image 2s, -o-transform 2s, margin-left 2s;
     transition: width 2s, height 2s, background-image 2s, transform 2s, margin-left 2s;
 }
 
@@ -529,6 +529,7 @@ h1 {
   -moz-animation-name: flashout;
   -o-animation-name: flashout;
   animation-name: flashout;
+}
     
 @-webkit-keyframes flashout {
   from {
@@ -1325,7 +1326,7 @@ h1 {
   margin-right: auto;
   background-image: url("images/clock/00.png");
   width: 250px;
-  height: 244px;
+  height: 240px;
   -webkit-animation: clock 10s infinite;
   -moz-animation: clock 10s infinite;
   -o-animation: clock 10s infinite;
