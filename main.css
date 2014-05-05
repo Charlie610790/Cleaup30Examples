@@ -89,7 +89,8 @@ h1 {
     margin-left: 0%;
     width: 100%;
   }
-  }
+
+}
     
 @-webkit-keyframes slidein {
   from {
@@ -101,6 +102,7 @@ h1 {
     margin-left: 0%;
     width: 100%;
   }
+
 }
 
 .bouncing {
@@ -134,6 +136,7 @@ h1 {
     width: 100%;
     margin-right: 52%;
   }
+
 }
     
 @-webkit-keyframes bouncing {
@@ -148,6 +151,7 @@ h1 {
     width: 100%;
     margin-right: 52%;
   }
+
 }
 
 @-o-keyframes bouncing {
@@ -162,6 +166,7 @@ h1 {
     width: 100%;
     margin-right: 52%;
   }
+
 }
 
 .squarecircle {
@@ -325,13 +330,25 @@ animation: fall 5s infinite;
 }
 
 @keyframes fall {
-  from {top: 0px;}
-  to {top: 200px;}
+  from {
+    top: 0px;
+  }
+
+  to {
+    top: 200px;
+  }
+
 }
 
 @-webkit-keyframes fall {
-  from {top: 0px;}
-  to {top: 200px;}
+  from {
+    top: 0px;
+  }
+
+  to {
+    top: 200px;
+  }
+
 }
 
 .triangle {
@@ -377,15 +394,33 @@ animation: fall 5s infinite;
 }
 
 @-webkit-keyframes flash {
-  0%{opacity: 1;} 
-  50%{opacity :0;} 
-  100%{opacity :1;}
+  0% {
+    opacity: 1;
+  } 
+
+  50% {
+    opacity :0;
+  } 
+
+  100% {
+    opacity :1;
+  }
+
 }
 
 @keyframes flash {
-  0%{opacity: 1;} 
-  50%{opacity: 0;} 
-  100%{opacity: 1;}
+  0% {
+    opacity: 1;
+  } 
+
+  50% {
+    opacity: 0;
+  } 
+
+  100% {
+    opacity: 1;
+  }
+
 }
 
 .flash:active {
@@ -408,6 +443,7 @@ animation: fall 5s infinite;
   to {
     margin-left:100%;
   }
+
 }
     
 @-webkit-keyframes flashout {
@@ -418,6 +454,7 @@ animation: fall 5s infinite;
   to {
     margin-left:100%;
   }
+
 }
 
 .stretch {
@@ -647,26 +684,27 @@ transition: 1s 2.3s;
   font-size: 150px;
   color: red;
   display: inline-block;
-  -webkit-animation: 1s 2.3s;
   animation: 1s 2.3s;
+  -webkit-animation: 1s 2.3s;
 }
 
 .diagnal:active {
-  animation-name: diagnal;
-  animation-duration:3s;
+  color: red;
   -webkit-animation-name: diagnal;
+  animation-name: diagnal;
   -webkit-animation-duration: 3s;
-  color: red;
+  animation-duration: 3s;
 }
+
 .diagnal2:hover {
-  animation-name: diagnalback;
-  animation-duration:3s;
   -webkit-animation-name: diagnalback;
+  animation-name: diagnalback;
   -webkit-animation-duration: 3s;
+  animation-duration:3s;
   color: red;
 }
+
 .diagnal {
-  
   text-align: center;
   height: 300px;
   font-size: 75px;
@@ -676,278 +714,303 @@ transition: 1s 2.3s;
   transition: 1s;
 }
 
-  @keyframes diagnal {
-    from {
-      margin-left: 0;
-      margin-top: 0;
-    }
-
-    to {
-      margin-left: 180px;
-      margin-top: 180px;
-    }
+@keyframes diagnal {
+  from {
+    margin-left: 0;
+    margin-top: 0;
   }
-  @-webkit-keyframes diagnal {
-    from {
-      margin-left: 0;
-      margin-top: 0;
-    }
 
-    to {
-      margin-left: 180px;
-      margin-top: 180px;
-    }
+  to {
+    margin-left: 180px;
+    margin-top: 180px;
   }
- .rocket {
-width: 1000px;
-min-height: 150px;
- }
- .rocketpad {
-background-color: brown;
-display: inline-block;
 
-width:50px;
- }
- .rocketship {
-display: inline-block;
-background-image: url("images/nogorocket.jpg");
-position: absolute;
-height: 70px;
-width: 100px;
-margin-top: 15px;
-background-size:100px 70px;
-transition: all ease-out;
- }
+}
 
- .rocketship:active {
-      max-height: 70px;
-      max-width: 200px;
-      display: inline-block;
-      background-image: url("images/rocket.jpg");
-      background-size:200px 70px;
-      animation-duration: 3s;
-      -webkit-animation-duration: 3s;
-      animation-name: slideout;
-      -webkit-animation-name: slideout;
-    }
+@-webkit-keyframes diagnal {
+  from {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  to {
+    margin-left: 180px;
+    margin-top: 180px;
+  }
+
+}
+
+.rocket {
+  width: 1000px;
+  min-height: 150px;
+}
+
+.rocketship {
+  display: inline-block;
+  background-image: url("images/nogorocket.jpg");
+  position: absolute;
+  height: 70px;
+  width: 100px;
+  margin-top: 15px;
+  background-size:100px 70px;
+  transition: all ease-out;
+}
+
+.rocketship:active {
+  max-height: 70px;
+  max-width: 200px;
+  display: inline-block;
+  background-image: url("images/rocket.jpg");
+  background-size:200px 70px;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-name: slideout;
+  animation-name: slideout;   
+}
     
-    @keyframes slideout {
-      from {
-        margin-left:50px;
-        width:100%;
-      }
+@keyframes slideout {
+  from {
+    margin-left:50px;
+    width:100%;
+  }
       
-      to {
-        margin-left:150%;
-        width:100%;
-      }
-    }
+  to {
+    margin-left:150%;
+    width:100%;
+  }
+
+}
     
-    @-webkit-keyframes slideout {
-      from {
-        margin-left:50px;
-        width:100%;
-      }
+@-webkit-keyframes slideout {
+  from {
+    margin-left:50px;
+    width:100%;
+  }
       
-      to {
-        margin-left:150%;
-        width:100%;
-      }
-    }
+  to {
+    margin-left:150%;
+    width:100%;
+  }
+
+}
+
 .leappad {
   max-height: 300px;
   min-height: 300px;
   height: 300px;
 }
+
 .frog {
--webkit-transition: ease;
-transition: ease;
-height: 100px;
-width: 100px;
-background-image: url("images/frog.jpg");
-height: 100px;
-width: 100px;
-background-size:100px 100px;
+  height: 100px;
+  width: 100px;
+  background-image: url("images/frog.jpg");
+  height: 100px;
+  width: 100px;
+  background-size: 100px 100px;
+  -webkit-transition: ease;
+  transition: ease;
 }
 
 .frog:active {
   -webkit-animation: frog 1s infinite;
   animation: frog 1s infinite;
-
 }
+
 @-webkit-keyframes frog {
-    0% {
-      margin-top: 0px;
-      background-size: 100px 100px;
-      background-image: url("images/frog.jpg");
-    }
-    10 {
-      margin-top: 200px;
-      margin-left: 100px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
-    20% {
-      margin-top: 150px;
-      margin-left: 125px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
+  0% {
+    margin-top: 0px;
+    background-size: 100px 100px;
+    background-image: url("images/frog.jpg");
+  }
 
-    30% {
-      margin-top: 100px;
-      margin-left: 150px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
-    40% {
-      margin-top: 150px;
-      margin-left: 175px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
-    50% {
-      margin-top: 200;
-      margin-left: 200px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
-    60% {
-      margin-top: 150;
-      margin-left: 225px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
-    70% {
-      margin-top: 100;
-      margin-left: 250px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
-    80% {
-      margin-top: 150;
-      margin-left: 275px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
-    90% {
-      margin-top: 200;
-      margin-left: 300px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
-    100% {
-      margin-top: 150;
-      margin-left: 325px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
-    }
+  10% {
+    margin-top: 200px;
+    margin-left: 100px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+  20% {
+    margin-top: 150px;
+    margin-left: 125px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+  30% {
+    margin-top: 100px;
+    margin-left: 150px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+  40% {
+    margin-top: 150px;
+    margin-left: 175px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+  50% {
+    margin-top: 200;
+    margin-left: 200px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+  60% {
+    margin-top: 150;
+    margin-left: 225px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+  70% {
+    margin-top: 100;
+    margin-left: 250px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+  80% {
+    margin-top: 150;
+    margin-left: 275px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+  90% {
+    margin-top: 200;
+    margin-left: 300px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+  100% {
+    margin-top: 150;
+    margin-left: 325px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+}
 @keyframes frog {
-    0% {
-      margin-top: 0px;
-      background-size: 100px 100px;
-      background-image: url("images/frog.jpg");
-    }
-    10 {
-      margin-top: 200px;
-      margin-left: 100px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
-    20% {
-      margin-top: 150px;
-      margin-left: 125px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
+  0% {
+    margin-top: 0px;
+    background-size: 100px 100px;
+    background-image: url("images/frog.jpg");
+  }
 
-    30% {
-      margin-top: 100px;
-      margin-left: 150px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
-    40% {
-      margin-top: 150px;
-      margin-left: 175px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
-    50% {
-      margin-top: 200;
-      margin-left: 200px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
-    60% {
-      margin-top: 150;
-      margin-left: 225px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
-    70% {
-      margin-top: 100;
-      margin-left: 250px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
-    80% {
-      margin-top: 150;
-      margin-left: 275px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
-    90% {
-      margin-top: 200;
-      margin-left: 300px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
-    100% {
-      margin-top: 150;
-      margin-left: 325px;
-      background-size: 100px 100px;
-      background-image: url("images/frogdown.jpg");
-    }
-    }
+  10 {
+    margin-top: 200px;
+    margin-left: 100px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+  20% {
+    margin-top: 150px;
+    margin-left: 125px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+  30% {
+    margin-top: 100px;
+    margin-left: 150px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+  40% {
+    margin-top: 150px;
+    margin-left: 175px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+  50% {
+    margin-top: 200;
+    margin-left: 200px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+  60% {
+    margin-top: 150;
+    margin-left: 225px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+  70% {
+    margin-top: 100;
+    margin-left: 250px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+  80% {
+    margin-top: 150;
+    margin-left: 275px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+  90% {
+    margin-top: 200;
+    margin-left: 300px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+  100% {
+    margin-top: 150;
+    margin-left: 325px;
+    background-size: 100px 100px;
+    background-image: url("images/frogdown.jpg");
+  }
+
+}
 .imgzoom {
-      background-image: url("images/zoom.jpg");
-      width: 350px;
-      height: 200px;
-      margin-left: auto;
-      margin-right: auto;
-      background-position: center;
-      background-size: 350px 200px;
-      transition: all 2s;
-      -webkit-transition: all 2s;
+  background-image: url("images/zoom.jpg");
+  width: 350px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
+  background-size: 350px 200px;
+  -webkit-transition: all 2s;
+  transition: all 2s;
 }
+
 .imgzoom:hover {
-    background-image: url("images/zoom.jpg");
-      max-width: 350px;
-      max-height: 200px;
-      margin-left: auto;
-      margin-right: auto;
-      background-size: 1150px 800px;
-      background-position: center;
+  background-image: url("images/zoom.jpg");
+  max-width: 350px;
+  max-height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: 1150px 800px;
+  background-position: center;
 }
+
 .hover {
-width: 400px;
-height: 400px;
-margin: 0 auto;
-margin-bottom: 250px;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  margin-bottom: 250px;
 }
 .hoverinside:hover{
   margin: 0 auto;
   -webkit-animation: hover 1s infinite;
   animation: hover 1s infinite;
-  
 }
+
 @-webkit-keyframes hover {
-    0% {
-      margin-top: 100px;
-      margin-left: auto;
-      margin-right: auto; 
+  0% {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto; 
 
     }
     50% {
